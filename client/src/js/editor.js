@@ -4,7 +4,7 @@ import { header } from "./header";
 
 export default class {
   constructor() {
-    const localData = localStorage.getItem("jate");
+    const localData = localStorage.getItem("content");
 
     // check if CodeMirror is loaded
     if (typeof CodeMirror === "undefined") {
@@ -28,7 +28,7 @@ export default class {
       console.info("Loaded data from IndexedDB, injecting into editor");
       let val = "";
       if (data.length > 0) {
-        val = data[data.length - 1].jate;
+        val = data[data.length - 1].value;
       } else {
         val = localData || header;
       }
@@ -36,13 +36,13 @@ export default class {
     });
 
     this.editor.on("change", () => {
-      localStorage.setItem("jate", this.editor.getValue());
+      localStorage.setItem("content", this.editor.getValue());
     });
 
     // Save the content of the editor when the editor itself is loses focus
     this.editor.on("blur", () => {
       console.log("The editor has lost focus");
-      putDb(localStorage.getItem("jate"));
+      putDb(localStorage.getItem("content"));
     });
   }
 }
