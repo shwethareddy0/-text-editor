@@ -2,15 +2,14 @@
 
 ## Description
 
-Text Editor is a CMS application where developers can publish their blog posts and comment on other developers’ posts as well.
+Text Editor is a Progressive Web Application where a user can use it in any browser to create notes or code snippets without an internet connection. It saves the content inside the text editor.
 
 Here is the link to the [deployed application](https://text-editor-pwa-sp.herokuapp.com/)
 
 ### Features
 
-- Easy to use
-- Provide options to add,edit and read posts.
-- Generates a responsive webpage
+- Easy to navigate
+- Works offline
 
 ## Table of Contents
 
@@ -25,7 +24,7 @@ Here is the link to the [deployed application](https://text-editor-pwa-sp.heroku
 - Create a new repository on your GitHub account.
 - Clone this repository.
 - Run `npm install`
-- Run `npm start`
+- Run `npm run start` at root directory.
 
 ## Usage
 
@@ -33,7 +32,7 @@ This project can be used in any web browser or on any devices including the mobi
 
 The following is the demo screenshot of the deployed application.
 
-![Demo screenshot]()
+![Demo screenshot](./images/demo-text-editor.gif)
 
 Following is a code snippet of the application page.
 
